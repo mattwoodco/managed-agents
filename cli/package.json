@@ -1,0 +1,27 @@
+{
+  "name": "clapp-cli",
+  "version": "0.2.0",
+  "description": "CLI for the local Managed Agents proxy server",
+  "type": "module",
+  "module": "src/index.ts",
+  "private": true,
+  "bin": {
+    "clapp": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "bun build --compile --minify --sourcemap src/index.ts --outfile dist/clapp"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@stacksjs/clapp": "^0.2.0"
+  }
+}
