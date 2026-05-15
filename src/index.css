@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: #111111;
+  --dark: #1a1a1a;
+  --gray-900: #222222;
+  --gray-800: #333333;
+  --gray-700: #444444;
+  --gray-600: #666666;
+  --gray-500: #888888;
+  --gray-400: #aaaaaa;
+  --gray-300: #cccccc;
+  --gray-200: #e0e0e0;
+  --gray-100: #f0f0f0;
+  --white: #ffffff;
+  --gold: #c09e5a;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  background: var(--black);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
