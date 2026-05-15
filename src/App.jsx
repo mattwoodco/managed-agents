@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import './App.css'
 
 const LOGO_SRC = `${import.meta.env.BASE_URL}gauntlet-logo.png`
@@ -748,6 +748,7 @@ function App() {
   const [current, setCurrent] = useState(0)
   const [direction, setDirection] = useState('forward')
   const total = slides.length
+  const touchRef = useRef(null)
 
   const go = useCallback((next) => {
     if (next < 0 || next >= total || next === current) return
@@ -775,10 +776,38 @@ function App() {
     return () => window.removeEventListener('keydown', onKey)
   }, [current, total, go])
 
+  const onTouchStart = useCallback((e) => {
+    const t = e.changedTouches[0]
+    touchRef.current = { x: t.clientX, y: t.clientY, time: Date.now() }
+  }, [])
+
+  const onTouchEnd = useCallback((e) => {
+    const start = touchRef.current
+    if (!start) return
+    touchRef.current = null
+    const t = e.changedTouches[0]
+    const dx = t.clientX - start.x
+    const dy = t.clientY - start.y
+    const elapsed = Date.now() - start.time
+    const absDx = Math.abs(dx)
+    const absDy = Math.abs(dy)
+    // Horizontal swipe: long enough, mostly horizontal, not too slow
+    if (absDx > 40 && absDx > absDy * 1.2 && elapsed < 800) {
+      go(dx < 0 ? current + 1 : current - 1)
+    }
+  }, [current, go])
+
   const progress = ((current + 1) / total) * 100
 
   return (
-    <div className="deck" role="region" aria-roledescription="slide deck" aria-label="From Chatbots to Digital Workers">
+    <div
+      className="deck"
+      role="region"
+      aria-roledescription="slide deck"
+      aria-label="From Chatbots to Digital Workers"
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+    >
       <div className="bg-grid" aria-hidden="true" />
 
       <img
