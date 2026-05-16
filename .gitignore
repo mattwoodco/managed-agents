@@ -1,0 +1,14 @@
+node_modules
+dist
+.next
+out
+.venv
+__pycache__
+*.pyc
+.DS_Store
+.vercel
+videos
+remotion-theater
+next-env.d.ts
+*.log
+.env*.local

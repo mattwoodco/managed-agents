@@ -1,0 +1,60 @@
+[
+  {
+    "order": 1,
+    "file": "01-from-chatbots-to-digital-workers.md",
+    "title": "From Chatbots to Digital Workers"
+  },
+  { "order": 2, "file": "02-the-call.md", "title": "From chat to work" },
+  { "order": 3, "file": "03-a-paradigm-shift.md", "title": "A paradigm shift" },
+  { "order": 4, "file": "04-six-tools-on-the-table.md", "title": "Six tools on the table" },
+  { "order": 5, "file": "05-layer-1-agent.md", "title": "The Agent — a job description" },
+  {
+    "order": 6,
+    "file": "06-layer-2-environment.md",
+    "title": "The Environment — a private office"
+  },
+  { "order": 7, "file": "07-layer-3-session.md", "title": "The Session — a workday" },
+  {
+    "order": 8,
+    "file": "08-layer-4-skills.md",
+    "title": "Skills — a table of contents, not a textbook"
+  },
+  { "order": 9, "file": "09-layer-5-vaults.md", "title": "Vaults — a safe deposit box" },
+  {
+    "order": 10,
+    "file": "10-layer-6-outcomes.md",
+    "title": "Outcomes — replace the back-and-forth"
+  },
+  { "order": 11, "file": "11-async-webhooks.md", "title": "Webhooks — call me when it's done" },
+  { "order": 12, "file": "12-permissions.md", "title": "Permissions — how much rope?" },
+  { "order": 13, "file": "13-a-crew-not-a-soloist.md", "title": "A crew, not a soloist" },
+  {
+    "order": 14,
+    "file": "14-steve-ships-campaigns.md",
+    "title": "Steve ships a week of campaigns over the weekend"
+  },
+  { "order": 15, "file": "15-what-just-changed.md", "title": "What just changed" },
+  {
+    "order": 16,
+    "file": "16-ten-patterns-ship-monday.md",
+    "title": "Ten patterns you can ship Monday"
+  },
+  {
+    "order": 17,
+    "file": "17-research-and-extraction.md",
+    "title": "Turn information into answers"
+  },
+  { "order": 18, "file": "18-marketing-and-ops.md", "title": "Ship the recurring work" },
+  { "order": 19, "file": "19-customer-and-revenue.md", "title": "Closer to the customer" },
+  {
+    "order": 20,
+    "file": "20-spotlight-social-asset-generator.md",
+    "title": "Social Asset Generator — the full template"
+  },
+  {
+    "order": 21,
+    "file": "21-leaving-with-a-workforce.md",
+    "title": "You're leaving with a workforce."
+  },
+  { "order": 22, "file": "22-demo.md", "title": "Demo" }
+]
