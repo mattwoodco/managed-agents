@@ -2,14 +2,14 @@ import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 import './globals.css'
 
-const basePath = process.env.NODE_ENV === 'production' ? '/chatbots-to-digital-workers' : ''
-const ogImage = `${basePath}/gauntlet-logo.png`
+const ogImage = '/gauntlet-logo.png'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://managed-agents.mattwood.co'),
   title: 'From Chatbots to Digital Workers',
   description:
     'Building Autonomous Infrastructure with Computer Science Principles — a deck on moving from chat to work.',
-  icons: { icon: `${basePath}/favicon.png` },
+  icons: { icon: '/favicon.png' },
   openGraph: {
     title: 'From Chatbots to Digital Workers',
     description: 'Building Autonomous Infrastructure with Computer Science Principles.',
